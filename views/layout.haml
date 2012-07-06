@@ -1,0 +1,23 @@
+!!! 5
+%html{ :lang => "en"}
+  %head
+    %title= "Connection Graph"
+    /[if lt IE 9]
+      %script(src="http://html5shiv.googlecode.com/svn/trunk/html5.js")
+     
+    %meta{ 'http-equiv' => "Content-Type", :content => "text/html; charset=UTF-8"}
+    %meta{ :content => "Use the power of the graph to allow attendees to kick ass.", :name => "description" }
+    %meta{ :content => "Max De Marzi", :name => "author" }
+    %meta{ :content => "3 days", :name => "revisit-after" }
+    %link{ :href => "http://creativecommons.org/licenses/by/3.0/", :rel => "license", :title => "Creative Commons Attribution 3.0 Unported License" }
+    = css :app, :media => 'screen'
+    = haml :'partials/mobile'
+    = haml :'partials/analytics' 
+  %body
+    = haml :'partials/ie7'
+    %header
+      = haml  :'partials/header'
+    %section{:id => 'container'}
+      = yield
+    %footer
+      = haml  :'partials/footer'

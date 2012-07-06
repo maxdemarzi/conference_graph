@@ -1,0 +1,9 @@
+- if current_user.nil?
+  %a.logo{ :href => '/'}
+- else
+  %a.logo{ :href => '/conferences'}
+  = main_navigation('/conferences' => 'Conferences', '/friends' => 'Friends')
+  #meta
+    %p
+      = current_user.nickname
+    %a.logout { :href => '/logout'}
