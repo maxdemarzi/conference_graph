@@ -82,25 +82,25 @@ You will need Redis in order to use Sidekiq for background jobs.
 Installation
 ----------------
 
-  git clone git@github.com:maxdemarzi/conference_graph.git
-  bundle install
-  sudo apt-get install redis-server or brew install redis
-  export SESSION_SECRET="A secret phrase"
-  export CONSUMER_KEY="Your Twitter Consumer Key"
-  export CONSUMER_SECRET="Your Twitter Consumer Secret"
-  export REDISTOGO_URL="redis://127.0.0.1:6379/"
-  foreman start
+    git clone git@github.com:maxdemarzi/conference_graph.git
+    bundle install
+    sudo apt-get install redis-server or brew install redis
+    export SESSION_SECRET="A secret phrase"
+    export CONSUMER_KEY="Your Twitter Consumer Key"
+    export CONSUMER_SECRET="Your Twitter Consumer Secret"
+    export REDISTOGO_URL="redis://127.0.0.1:6379/"
+    foreman start
 
 On Heroku
 ---------
 
-  git clone git@github.com:maxdemarzi/conference_graph.git
-  heroku apps:create --stack cedar
-  heroku config:add SESSION_SECRET="A secret phrase"
-  heroku config:add CONSUMER_KEY="Your Twitter Consumer Key"
-  heroku config:add CONSUMER_SECRET="Your Twitter Consumer Secret"
-  heroku addons:add neo4j
-  heroku addons:add redistogo
-  git push heroku master
+    git clone git@github.com:maxdemarzi/conference_graph.git
+    heroku apps:create --stack cedar
+    heroku config:add SESSION_SECRET="A secret phrase"
+    heroku config:add CONSUMER_KEY="Your Twitter Consumer Key"
+    heroku config:add CONSUMER_SECRET="Your Twitter Consumer Secret"
+    heroku addons:add neo4j
+    heroku addons:add redistogo
+    git push heroku master
 
 See it running live at http://conference-graph.herokuapp.com
