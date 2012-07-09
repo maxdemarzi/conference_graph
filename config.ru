@@ -7,7 +7,7 @@ Bundler.require(:default, ENV["RACK_ENV"].to_sym)
 require 'sinatra/config_file'
 require 'sinatra/reloader' if development?
 require 'sidekiq/web'
-require 'cg'
+require './lib/cg'
 require './cg_api'
 require './cg_app'
 
